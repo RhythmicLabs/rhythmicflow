@@ -6,7 +6,7 @@
 - **Purpose**: Generic workflow library (refactored from K8s-specific @kubegram/kubegram-core)
 - **Runtime**: Bun (tests) + Node (production)
 - **Language**: TypeScript 5.9+ (strict mode)
-- **License**: BUSL-1.1
+- **License**: Apache-2.0
 
 ## Common Commands
 
