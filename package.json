@@ -1,0 +1,84 @@
+{
+  "name": "@rhythmiclab/rhythmicflow",
+  "version": "1.0.3",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "description": "Generic workflow library with LLM integration, MCP protocol support, and state machine patterns",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "bun run build",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "test:ci": "bun test --coverage",
+    "lint": "eslint src/**/*.ts --no-warn-ignored",
+    "lint:fix": "eslint src/**/*.ts --no-warn-ignored --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "check-all": "bun run type-check && bun run lint && bun run format:check && bun run test:ci"
+  },
+  "keywords": [
+    "workflow",
+    "state-machine",
+    "llm",
+    "mcp",
+    "rag",
+    "ai",
+    "data-ingestion",
+    "generic"
+  ],
+  "author": "RythmicLabs",
+  "license": "BUSL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shehats/rhythmic-workflows.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shehats/rhythmic-workflows/issues"
+  },
+  "homepage": "https://github.com/shehats/rhythmic-workflows#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.13",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.58",
+    "@ai-sdk/google": "^3.0.43",
+    "@ai-sdk/openai": "^3.0.41",
+    "@rhythmiclab/rhythmic-events": "^1.0.1",
+    "ai": "^6.0.116",
+    "croner": "^9.1.0",
+    "ioredis": "^5.4.2",
+    "uuid": "^11.1.0",
+    "ws": "^8.20.0",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "redis": "^4.7.1"
+  },
+  "peerDependenciesMeta": {
+    "redis": {
+      "optional": true
+    }
+  }
+}
