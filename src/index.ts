@@ -29,13 +29,6 @@ export { LLMProviderFactory } from './llm/providers.js';
 export type { LanguageModel } from './llm/providers.js';
 export { ModelProvider, ModelName, VALID_MODELS, DEFAULT_MODEL } from './types/enums.js';
 
-// RAG services
-export { EmbeddingsService } from './rag/embeddings.js';
-export { RagContextService } from './rag/context.js';
-
-// Prompt utilities
-export { processUserContext, ProcessedContext } from './prompts/context-utils.js';
-
 // LLM Workflow
 export type { LLMWorkflowStep, LLMWorkflowState, LLMWorkflowConfig } from './types/workflow-states.js';
 export { createLLMWorkflow } from './workflows/llm-workflow.js';
