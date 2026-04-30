@@ -43,12 +43,12 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shehats/rhythmic-workflows.git"
+    "url": "https://github.com/RhythmicLabs/rhythmic-workflows.git"
   },
   "bugs": {
-    "url": "https://github.com/shehats/rhythmic-workflows/issues"
+    "url": "https://github.com/RhythmicLabs/rhythmic-workflows/issues"
   },
-  "homepage": "https://github.com/shehats/rhythmic-workflows#readme",
+  "homepage": "https://github.com/RhythmicLabs/rhythmic-workflows#readme",
   "devDependencies": {
     "@types/node": "^24.10.13",
     "@types/uuid": "^10.0.0",
